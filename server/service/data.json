@@ -1,0 +1,1111 @@
+{
+  "stevens": [
+    {
+      "InventoryDate": "1/3/2021",
+      "Remaining": 20,
+      "InventoryDateTime": "2021-01-03T00:00:00",
+      "Capacity": 0
+    },
+    {
+      "InventoryDate": "1/4/2021",
+      "Remaining": 20,
+      "InventoryDateTime": "2021-01-04T00:00:00",
+      "Capacity": 0
+    },
+    {
+      "InventoryDate": "1/5/2021",
+      "Remaining": 20,
+      "InventoryDateTime": "2021-01-05T00:00:00",
+      "Capacity": 0
+    },
+    {
+      "InventoryDate": "1/6/2021",
+      "Remaining": 20,
+      "InventoryDateTime": "2021-01-06T00:00:00",
+      "Capacity": 0
+    },
+    {
+      "InventoryDate": "1/7/2021",
+      "Remaining": 20,
+      "InventoryDateTime": "2021-01-07T00:00:00",
+      "Capacity": 0
+    },
+    {
+      "InventoryDate": "1/8/2021",
+      "Remaining": 20,
+      "InventoryDateTime": "2021-01-08T00:00:00",
+      "Capacity": 0
+    },
+    {
+      "InventoryDate": "1/9/2021",
+      "Remaining": 0,
+      "InventoryDateTime": "2021-01-09T00:00:00",
+      "Capacity": 0
+    },
+    {
+      "InventoryDate": "1/10/2021",
+      "Remaining": 0,
+      "InventoryDateTime": "2021-01-10T00:00:00",
+      "Capacity": 0
+    },
+    {
+      "InventoryDate": "1/11/2021",
+      "Remaining": 20,
+      "InventoryDateTime": "2021-01-11T00:00:00",
+      "Capacity": 0
+    },
+    {
+      "InventoryDate": "1/12/2021",
+      "Remaining": 20,
+      "InventoryDateTime": "2021-01-12T00:00:00",
+      "Capacity": 0
+    },
+    {
+      "InventoryDate": "1/13/2021",
+      "Remaining": 20,
+      "InventoryDateTime": "2021-01-13T00:00:00",
+      "Capacity": 0
+    },
+    {
+      "InventoryDate": "1/14/2021",
+      "Remaining": 20,
+      "InventoryDateTime": "2021-01-14T00:00:00",
+      "Capacity": 0
+    },
+    {
+      "InventoryDate": "1/15/2021",
+      "Remaining": 20,
+      "InventoryDateTime": "2021-01-15T00:00:00",
+      "Capacity": 0
+    },
+    {
+      "InventoryDate": "1/16/2021",
+      "Remaining": 0,
+      "InventoryDateTime": "2021-01-16T00:00:00",
+      "Capacity": 0
+    },
+    {
+      "InventoryDate": "1/17/2021",
+      "Remaining": 0,
+      "InventoryDateTime": "2021-01-17T00:00:00",
+      "Capacity": 0
+    },
+    {
+      "InventoryDate": "1/18/2021",
+      "Remaining": 20,
+      "InventoryDateTime": "2021-01-18T00:00:00",
+      "Capacity": 0
+    },
+    {
+      "InventoryDate": "1/19/2021",
+      "Remaining": 20,
+      "InventoryDateTime": "2021-01-19T00:00:00",
+      "Capacity": 0
+    },
+    {
+      "InventoryDate": "1/20/2021",
+      "Remaining": 20,
+      "InventoryDateTime": "2021-01-20T00:00:00",
+      "Capacity": 0
+    },
+    {
+      "InventoryDate": "1/21/2021",
+      "Remaining": 20,
+      "InventoryDateTime": "2021-01-21T00:00:00",
+      "Capacity": 0
+    },
+    {
+      "InventoryDate": "1/22/2021",
+      "Remaining": 20,
+      "InventoryDateTime": "2021-01-22T00:00:00",
+      "Capacity": 0
+    },
+    {
+      "InventoryDate": "1/23/2021",
+      "Remaining": 0,
+      "InventoryDateTime": "2021-01-23T00:00:00",
+      "Capacity": 0
+    },
+    {
+      "InventoryDate": "1/24/2021",
+      "Remaining": 0,
+      "InventoryDateTime": "2021-01-24T00:00:00",
+      "Capacity": 0
+    },
+    {
+      "InventoryDate": "1/25/2021",
+      "Remaining": 20,
+      "InventoryDateTime": "2021-01-25T00:00:00",
+      "Capacity": 0
+    },
+    {
+      "InventoryDate": "1/26/2021",
+      "Remaining": 20,
+      "InventoryDateTime": "2021-01-26T00:00:00",
+      "Capacity": 0
+    },
+    {
+      "InventoryDate": "1/27/2021",
+      "Remaining": 20,
+      "InventoryDateTime": "2021-01-27T00:00:00",
+      "Capacity": 0
+    },
+    {
+      "InventoryDate": "1/28/2021",
+      "Remaining": 20,
+      "InventoryDateTime": "2021-01-28T00:00:00",
+      "Capacity": 0
+    },
+    {
+      "InventoryDate": "1/29/2021",
+      "Remaining": 20,
+      "InventoryDateTime": "2021-01-29T00:00:00",
+      "Capacity": 0
+    },
+    {
+      "InventoryDate": "1/30/2021",
+      "Remaining": 0,
+      "InventoryDateTime": "2021-01-30T00:00:00",
+      "Capacity": 0
+    },
+    {
+      "InventoryDate": "1/31/2021",
+      "Remaining": 0,
+      "InventoryDateTime": "2021-01-31T00:00:00",
+      "Capacity": 0
+    },
+    {
+      "InventoryDate": "2/1/2021",
+      "Remaining": 20,
+      "InventoryDateTime": "2021-02-01T00:00:00",
+      "Capacity": 0
+    },
+    {
+      "InventoryDate": "2/2/2021",
+      "Remaining": 20,
+      "InventoryDateTime": "2021-02-02T00:00:00",
+      "Capacity": 0
+    },
+    {
+      "InventoryDate": "2/3/2021",
+      "Remaining": 20,
+      "InventoryDateTime": "2021-02-03T00:00:00",
+      "Capacity": 0
+    },
+    {
+      "InventoryDate": "2/4/2021",
+      "Remaining": 20,
+      "InventoryDateTime": "2021-02-04T00:00:00",
+      "Capacity": 0
+    },
+    {
+      "InventoryDate": "2/5/2021",
+      "Remaining": 20,
+      "InventoryDateTime": "2021-02-05T00:00:00",
+      "Capacity": 0
+    },
+    {
+      "InventoryDate": "2/6/2021",
+      "Remaining": 0,
+      "InventoryDateTime": "2021-02-06T00:00:00",
+      "Capacity": 0
+    },
+    {
+      "InventoryDate": "2/7/2021",
+      "Remaining": 20,
+      "InventoryDateTime": "2021-02-07T00:00:00",
+      "Capacity": 0
+    },
+    {
+      "InventoryDate": "2/8/2021",
+      "Remaining": 20,
+      "InventoryDateTime": "2021-02-08T00:00:00",
+      "Capacity": 0
+    },
+    {
+      "InventoryDate": "2/9/2021",
+      "Remaining": 20,
+      "InventoryDateTime": "2021-02-09T00:00:00",
+      "Capacity": 0
+    },
+    {
+      "InventoryDate": "2/10/2021",
+      "Remaining": 20,
+      "InventoryDateTime": "2021-02-10T00:00:00",
+      "Capacity": 0
+    },
+    {
+      "InventoryDate": "2/11/2021",
+      "Remaining": 20,
+      "InventoryDateTime": "2021-02-11T00:00:00",
+      "Capacity": 0
+    },
+    {
+      "InventoryDate": "2/12/2021",
+      "Remaining": 20,
+      "InventoryDateTime": "2021-02-12T00:00:00",
+      "Capacity": 0
+    },
+    {
+      "InventoryDate": "2/13/2021",
+      "Remaining": 0,
+      "InventoryDateTime": "2021-02-13T00:00:00",
+      "Capacity": 0
+    },
+    {
+      "InventoryDate": "2/14/2021",
+      "Remaining": 20,
+      "InventoryDateTime": "2021-02-14T00:00:00",
+      "Capacity": 0
+    },
+    {
+      "InventoryDate": "2/15/2021",
+      "Remaining": 20,
+      "InventoryDateTime": "2021-02-15T00:00:00",
+      "Capacity": 0
+    },
+    {
+      "InventoryDate": "2/16/2021",
+      "Remaining": 20,
+      "InventoryDateTime": "2021-02-16T00:00:00",
+      "Capacity": 0
+    },
+    {
+      "InventoryDate": "2/17/2021",
+      "Remaining": 20,
+      "InventoryDateTime": "2021-02-17T00:00:00",
+      "Capacity": 0
+    },
+    {
+      "InventoryDate": "2/18/2021",
+      "Remaining": 20,
+      "InventoryDateTime": "2021-02-18T00:00:00",
+      "Capacity": 0
+    },
+    {
+      "InventoryDate": "2/19/2021",
+      "Remaining": 20,
+      "InventoryDateTime": "2021-02-19T00:00:00",
+      "Capacity": 0
+    },
+    {
+      "InventoryDate": "2/20/2021",
+      "Remaining": 20,
+      "InventoryDateTime": "2021-02-20T00:00:00",
+      "Capacity": 0
+    },
+    {
+      "InventoryDate": "2/21/2021",
+      "Remaining": 20,
+      "InventoryDateTime": "2021-02-21T00:00:00",
+      "Capacity": 0
+    },
+    {
+      "InventoryDate": "2/22/2021",
+      "Remaining": 20,
+      "InventoryDateTime": "2021-02-22T00:00:00",
+      "Capacity": 0
+    },
+    {
+      "InventoryDate": "2/23/2021",
+      "Remaining": 20,
+      "InventoryDateTime": "2021-02-23T00:00:00",
+      "Capacity": 0
+    },
+    {
+      "InventoryDate": "2/24/2021",
+      "Remaining": 20,
+      "InventoryDateTime": "2021-02-24T00:00:00",
+      "Capacity": 0
+    },
+    {
+      "InventoryDate": "2/25/2021",
+      "Remaining": 20,
+      "InventoryDateTime": "2021-02-25T00:00:00",
+      "Capacity": 0
+    },
+    {
+      "InventoryDate": "2/26/2021",
+      "Remaining": 20,
+      "InventoryDateTime": "2021-02-26T00:00:00",
+      "Capacity": 0
+    },
+    {
+      "InventoryDate": "2/27/2021",
+      "Remaining": 20,
+      "InventoryDateTime": "2021-02-27T00:00:00",
+      "Capacity": 0
+    },
+    {
+      "InventoryDate": "2/28/2021",
+      "Remaining": 20,
+      "InventoryDateTime": "2021-02-28T00:00:00",
+      "Capacity": 0
+    },
+    {
+      "InventoryDate": "3/1/2021",
+      "Remaining": 20,
+      "InventoryDateTime": "2021-03-01T00:00:00",
+      "Capacity": 0
+    },
+    {
+      "InventoryDate": "3/2/2021",
+      "Remaining": 20,
+      "InventoryDateTime": "2021-03-02T00:00:00",
+      "Capacity": 0
+    },
+    {
+      "InventoryDate": "3/3/2021",
+      "Remaining": 20,
+      "InventoryDateTime": "2021-03-03T00:00:00",
+      "Capacity": 0
+    },
+    {
+      "InventoryDate": "3/4/2021",
+      "Remaining": 20,
+      "InventoryDateTime": "2021-03-04T00:00:00",
+      "Capacity": 0
+    },
+    {
+      "InventoryDate": "3/5/2021",
+      "Remaining": 20,
+      "InventoryDateTime": "2021-03-05T00:00:00",
+      "Capacity": 0
+    },
+    {
+      "InventoryDate": "3/6/2021",
+      "Remaining": 20,
+      "InventoryDateTime": "2021-03-06T00:00:00",
+      "Capacity": 0
+    },
+    {
+      "InventoryDate": "3/7/2021",
+      "Remaining": 20,
+      "InventoryDateTime": "2021-03-07T00:00:00",
+      "Capacity": 0
+    },
+    {
+      "InventoryDate": "3/8/2021",
+      "Remaining": 20,
+      "InventoryDateTime": "2021-03-08T00:00:00",
+      "Capacity": 0
+    },
+    {
+      "InventoryDate": "3/9/2021",
+      "Remaining": 20,
+      "InventoryDateTime": "2021-03-09T00:00:00",
+      "Capacity": 0
+    },
+    {
+      "InventoryDate": "3/10/2021",
+      "Remaining": 20,
+      "InventoryDateTime": "2021-03-10T00:00:00",
+      "Capacity": 0
+    },
+    {
+      "InventoryDate": "3/11/2021",
+      "Remaining": 20,
+      "InventoryDateTime": "2021-03-11T00:00:00",
+      "Capacity": 0
+    },
+    {
+      "InventoryDate": "3/12/2021",
+      "Remaining": 20,
+      "InventoryDateTime": "2021-03-12T00:00:00",
+      "Capacity": 0
+    },
+    {
+      "InventoryDate": "3/13/2021",
+      "Remaining": 20,
+      "InventoryDateTime": "2021-03-13T00:00:00",
+      "Capacity": 0
+    },
+    {
+      "InventoryDate": "3/14/2021",
+      "Remaining": 20,
+      "InventoryDateTime": "2021-03-14T00:00:00",
+      "Capacity": 0
+    },
+    {
+      "InventoryDate": "3/15/2021",
+      "Remaining": 20,
+      "InventoryDateTime": "2021-03-15T00:00:00",
+      "Capacity": 0
+    },
+    {
+      "InventoryDate": "3/16/2021",
+      "Remaining": 20,
+      "InventoryDateTime": "2021-03-16T00:00:00",
+      "Capacity": 0
+    },
+    {
+      "InventoryDate": "3/17/2021",
+      "Remaining": 20,
+      "InventoryDateTime": "2021-03-17T00:00:00",
+      "Capacity": 0
+    },
+    {
+      "InventoryDate": "3/18/2021",
+      "Remaining": 20,
+      "InventoryDateTime": "2021-03-18T00:00:00",
+      "Capacity": 0
+    },
+    {
+      "InventoryDate": "3/19/2021",
+      "Remaining": 20,
+      "InventoryDateTime": "2021-03-19T00:00:00",
+      "Capacity": 0
+    },
+    {
+      "InventoryDate": "3/20/2021",
+      "Remaining": 20,
+      "InventoryDateTime": "2021-03-20T00:00:00",
+      "Capacity": 0
+    },
+    {
+      "InventoryDate": "3/21/2021",
+      "Remaining": 20,
+      "InventoryDateTime": "2021-03-21T00:00:00",
+      "Capacity": 0
+    },
+    {
+      "InventoryDate": "3/22/2021",
+      "Remaining": 20,
+      "InventoryDateTime": "2021-03-22T00:00:00",
+      "Capacity": 0
+    },
+    {
+      "InventoryDate": "3/23/2021",
+      "Remaining": 20,
+      "InventoryDateTime": "2021-03-23T00:00:00",
+      "Capacity": 0
+    },
+    {
+      "InventoryDate": "3/24/2021",
+      "Remaining": 20,
+      "InventoryDateTime": "2021-03-24T00:00:00",
+      "Capacity": 0
+    },
+    {
+      "InventoryDate": "3/25/2021",
+      "Remaining": 20,
+      "InventoryDateTime": "2021-03-25T00:00:00",
+      "Capacity": 0
+    },
+    {
+      "InventoryDate": "3/26/2021",
+      "Remaining": 20,
+      "InventoryDateTime": "2021-03-26T00:00:00",
+      "Capacity": 0
+    },
+    {
+      "InventoryDate": "3/27/2021",
+      "Remaining": 20,
+      "InventoryDateTime": "2021-03-27T00:00:00",
+      "Capacity": 0
+    },
+    {
+      "InventoryDate": "3/28/2021",
+      "Remaining": 20,
+      "InventoryDateTime": "2021-03-28T00:00:00",
+      "Capacity": 0
+    },
+    {
+      "InventoryDate": "3/29/2021",
+      "Remaining": 20,
+      "InventoryDateTime": "2021-03-29T00:00:00",
+      "Capacity": 0
+    },
+    {
+      "InventoryDate": "3/30/2021",
+      "Remaining": 20,
+      "InventoryDateTime": "2021-03-30T00:00:00",
+      "Capacity": 0
+    },
+    {
+      "InventoryDate": "3/31/2021",
+      "Remaining": 20,
+      "InventoryDateTime": "2021-03-31T00:00:00",
+      "Capacity": 0
+    },
+    {
+      "InventoryDate": "4/1/2021",
+      "Remaining": 20,
+      "InventoryDateTime": "2021-04-01T00:00:00",
+      "Capacity": 0
+    },
+    {
+      "InventoryDate": "4/2/2021",
+      "Remaining": 20,
+      "InventoryDateTime": "2021-04-02T00:00:00",
+      "Capacity": 0
+    },
+    {
+      "InventoryDate": "4/3/2021",
+      "Remaining": 20,
+      "InventoryDateTime": "2021-04-03T00:00:00",
+      "Capacity": 0
+    },
+    {
+      "InventoryDate": "4/4/2021",
+      "Remaining": 20,
+      "InventoryDateTime": "2021-04-04T00:00:00",
+      "Capacity": 0
+    }
+  ],
+  "keystone": [
+    {
+      "InventoryDate": "1/3/2021",
+      "Remaining": 20,
+      "InventoryDateTime": "2021-01-03T00:00:00",
+      "Capacity": 0
+    },
+    {
+      "InventoryDate": "1/4/2021",
+      "Remaining": 20,
+      "InventoryDateTime": "2021-01-04T00:00:00",
+      "Capacity": 0
+    },
+    {
+      "InventoryDate": "1/5/2021",
+      "Remaining": 20,
+      "InventoryDateTime": "2021-01-05T00:00:00",
+      "Capacity": 0
+    },
+    {
+      "InventoryDate": "1/6/2021",
+      "Remaining": 20,
+      "InventoryDateTime": "2021-01-06T00:00:00",
+      "Capacity": 0
+    },
+    {
+      "InventoryDate": "1/7/2021",
+      "Remaining": 20,
+      "InventoryDateTime": "2021-01-07T00:00:00",
+      "Capacity": 0
+    },
+    {
+      "InventoryDate": "1/8/2021",
+      "Remaining": 20,
+      "InventoryDateTime": "2021-01-08T00:00:00",
+      "Capacity": 0
+    },
+    {
+      "InventoryDate": "1/9/2021",
+      "Remaining": 0,
+      "InventoryDateTime": "2021-01-09T00:00:00",
+      "Capacity": 0
+    },
+    {
+      "InventoryDate": "1/10/2021",
+      "Remaining": 20,
+      "InventoryDateTime": "2021-01-10T00:00:00",
+      "Capacity": 0
+    },
+    {
+      "InventoryDate": "1/11/2021",
+      "Remaining": 20,
+      "InventoryDateTime": "2021-01-11T00:00:00",
+      "Capacity": 0
+    },
+    {
+      "InventoryDate": "1/12/2021",
+      "Remaining": 20,
+      "InventoryDateTime": "2021-01-12T00:00:00",
+      "Capacity": 0
+    },
+    {
+      "InventoryDate": "1/13/2021",
+      "Remaining": 20,
+      "InventoryDateTime": "2021-01-13T00:00:00",
+      "Capacity": 0
+    },
+    {
+      "InventoryDate": "1/14/2021",
+      "Remaining": 20,
+      "InventoryDateTime": "2021-01-14T00:00:00",
+      "Capacity": 0
+    },
+    {
+      "InventoryDate": "1/15/2021",
+      "Remaining": 20,
+      "InventoryDateTime": "2021-01-15T00:00:00",
+      "Capacity": 0
+    },
+    {
+      "InventoryDate": "1/16/2021",
+      "Remaining": 20,
+      "InventoryDateTime": "2021-01-16T00:00:00",
+      "Capacity": 0
+    },
+    {
+      "InventoryDate": "1/17/2021",
+      "Remaining": 20,
+      "InventoryDateTime": "2021-01-17T00:00:00",
+      "Capacity": 0
+    },
+    {
+      "InventoryDate": "1/18/2021",
+      "Remaining": 20,
+      "InventoryDateTime": "2021-01-18T00:00:00",
+      "Capacity": 0
+    },
+    {
+      "InventoryDate": "1/19/2021",
+      "Remaining": 20,
+      "InventoryDateTime": "2021-01-19T00:00:00",
+      "Capacity": 0
+    },
+    {
+      "InventoryDate": "1/20/2021",
+      "Remaining": 20,
+      "InventoryDateTime": "2021-01-20T00:00:00",
+      "Capacity": 0
+    },
+    {
+      "InventoryDate": "1/21/2021",
+      "Remaining": 20,
+      "InventoryDateTime": "2021-01-21T00:00:00",
+      "Capacity": 0
+    },
+    {
+      "InventoryDate": "1/22/2021",
+      "Remaining": 20,
+      "InventoryDateTime": "2021-01-22T00:00:00",
+      "Capacity": 0
+    },
+    {
+      "InventoryDate": "1/23/2021",
+      "Remaining": 20,
+      "InventoryDateTime": "2021-01-23T00:00:00",
+      "Capacity": 0
+    },
+    {
+      "InventoryDate": "1/24/2021",
+      "Remaining": 20,
+      "InventoryDateTime": "2021-01-24T00:00:00",
+      "Capacity": 0
+    },
+    {
+      "InventoryDate": "1/25/2021",
+      "Remaining": 20,
+      "InventoryDateTime": "2021-01-25T00:00:00",
+      "Capacity": 0
+    },
+    {
+      "InventoryDate": "1/26/2021",
+      "Remaining": 20,
+      "InventoryDateTime": "2021-01-26T00:00:00",
+      "Capacity": 0
+    },
+    {
+      "InventoryDate": "1/27/2021",
+      "Remaining": 20,
+      "InventoryDateTime": "2021-01-27T00:00:00",
+      "Capacity": 0
+    },
+    {
+      "InventoryDate": "1/28/2021",
+      "Remaining": 20,
+      "InventoryDateTime": "2021-01-28T00:00:00",
+      "Capacity": 0
+    },
+    {
+      "InventoryDate": "1/29/2021",
+      "Remaining": 20,
+      "InventoryDateTime": "2021-01-29T00:00:00",
+      "Capacity": 0
+    },
+    {
+      "InventoryDate": "1/30/2021",
+      "Remaining": 20,
+      "InventoryDateTime": "2021-01-30T00:00:00",
+      "Capacity": 0
+    },
+    {
+      "InventoryDate": "1/31/2021",
+      "Remaining": 20,
+      "InventoryDateTime": "2021-01-31T00:00:00",
+      "Capacity": 0
+    },
+    {
+      "InventoryDate": "2/1/2021",
+      "Remaining": 20,
+      "InventoryDateTime": "2021-02-01T00:00:00",
+      "Capacity": 0
+    },
+    {
+      "InventoryDate": "2/2/2021",
+      "Remaining": 20,
+      "InventoryDateTime": "2021-02-02T00:00:00",
+      "Capacity": 0
+    },
+    {
+      "InventoryDate": "2/3/2021",
+      "Remaining": 20,
+      "InventoryDateTime": "2021-02-03T00:00:00",
+      "Capacity": 0
+    },
+    {
+      "InventoryDate": "2/4/2021",
+      "Remaining": 20,
+      "InventoryDateTime": "2021-02-04T00:00:00",
+      "Capacity": 0
+    },
+    {
+      "InventoryDate": "2/5/2021",
+      "Remaining": 20,
+      "InventoryDateTime": "2021-02-05T00:00:00",
+      "Capacity": 0
+    },
+    {
+      "InventoryDate": "2/6/2021",
+      "Remaining": 20,
+      "InventoryDateTime": "2021-02-06T00:00:00",
+      "Capacity": 0
+    },
+    {
+      "InventoryDate": "2/7/2021",
+      "Remaining": 20,
+      "InventoryDateTime": "2021-02-07T00:00:00",
+      "Capacity": 0
+    },
+    {
+      "InventoryDate": "2/8/2021",
+      "Remaining": 20,
+      "InventoryDateTime": "2021-02-08T00:00:00",
+      "Capacity": 0
+    },
+    {
+      "InventoryDate": "2/9/2021",
+      "Remaining": 20,
+      "InventoryDateTime": "2021-02-09T00:00:00",
+      "Capacity": 0
+    },
+    {
+      "InventoryDate": "2/10/2021",
+      "Remaining": 20,
+      "InventoryDateTime": "2021-02-10T00:00:00",
+      "Capacity": 0
+    },
+    {
+      "InventoryDate": "2/11/2021",
+      "Remaining": 20,
+      "InventoryDateTime": "2021-02-11T00:00:00",
+      "Capacity": 0
+    },
+    {
+      "InventoryDate": "2/12/2021",
+      "Remaining": 20,
+      "InventoryDateTime": "2021-02-12T00:00:00",
+      "Capacity": 0
+    },
+    {
+      "InventoryDate": "2/13/2021",
+      "Remaining": 20,
+      "InventoryDateTime": "2021-02-13T00:00:00",
+      "Capacity": 0
+    },
+    {
+      "InventoryDate": "2/14/2021",
+      "Remaining": 20,
+      "InventoryDateTime": "2021-02-14T00:00:00",
+      "Capacity": 0
+    },
+    {
+      "InventoryDate": "2/15/2021",
+      "Remaining": 20,
+      "InventoryDateTime": "2021-02-15T00:00:00",
+      "Capacity": 0
+    },
+    {
+      "InventoryDate": "2/16/2021",
+      "Remaining": 20,
+      "InventoryDateTime": "2021-02-16T00:00:00",
+      "Capacity": 0
+    },
+    {
+      "InventoryDate": "2/17/2021",
+      "Remaining": 20,
+      "InventoryDateTime": "2021-02-17T00:00:00",
+      "Capacity": 0
+    },
+    {
+      "InventoryDate": "2/18/2021",
+      "Remaining": 20,
+      "InventoryDateTime": "2021-02-18T00:00:00",
+      "Capacity": 0
+    },
+    {
+      "InventoryDate": "2/19/2021",
+      "Remaining": 20,
+      "InventoryDateTime": "2021-02-19T00:00:00",
+      "Capacity": 0
+    },
+    {
+      "InventoryDate": "2/20/2021",
+      "Remaining": 20,
+      "InventoryDateTime": "2021-02-20T00:00:00",
+      "Capacity": 0
+    },
+    {
+      "InventoryDate": "2/21/2021",
+      "Remaining": 20,
+      "InventoryDateTime": "2021-02-21T00:00:00",
+      "Capacity": 0
+    },
+    {
+      "InventoryDate": "2/22/2021",
+      "Remaining": 20,
+      "InventoryDateTime": "2021-02-22T00:00:00",
+      "Capacity": 0
+    },
+    {
+      "InventoryDate": "2/23/2021",
+      "Remaining": 20,
+      "InventoryDateTime": "2021-02-23T00:00:00",
+      "Capacity": 0
+    },
+    {
+      "InventoryDate": "2/24/2021",
+      "Remaining": 20,
+      "InventoryDateTime": "2021-02-24T00:00:00",
+      "Capacity": 0
+    },
+    {
+      "InventoryDate": "2/25/2021",
+      "Remaining": 20,
+      "InventoryDateTime": "2021-02-25T00:00:00",
+      "Capacity": 0
+    },
+    {
+      "InventoryDate": "2/26/2021",
+      "Remaining": 20,
+      "InventoryDateTime": "2021-02-26T00:00:00",
+      "Capacity": 0
+    },
+    {
+      "InventoryDate": "2/27/2021",
+      "Remaining": 20,
+      "InventoryDateTime": "2021-02-27T00:00:00",
+      "Capacity": 0
+    },
+    {
+      "InventoryDate": "2/28/2021",
+      "Remaining": 20,
+      "InventoryDateTime": "2021-02-28T00:00:00",
+      "Capacity": 0
+    },
+    {
+      "InventoryDate": "3/1/2021",
+      "Remaining": 20,
+      "InventoryDateTime": "2021-03-01T00:00:00",
+      "Capacity": 0
+    },
+    {
+      "InventoryDate": "3/2/2021",
+      "Remaining": 20,
+      "InventoryDateTime": "2021-03-02T00:00:00",
+      "Capacity": 0
+    },
+    {
+      "InventoryDate": "3/3/2021",
+      "Remaining": 20,
+      "InventoryDateTime": "2021-03-03T00:00:00",
+      "Capacity": 0
+    },
+    {
+      "InventoryDate": "3/4/2021",
+      "Remaining": 20,
+      "InventoryDateTime": "2021-03-04T00:00:00",
+      "Capacity": 0
+    },
+    {
+      "InventoryDate": "3/5/2021",
+      "Remaining": 20,
+      "InventoryDateTime": "2021-03-05T00:00:00",
+      "Capacity": 0
+    },
+    {
+      "InventoryDate": "3/6/2021",
+      "Remaining": 20,
+      "InventoryDateTime": "2021-03-06T00:00:00",
+      "Capacity": 0
+    },
+    {
+      "InventoryDate": "3/7/2021",
+      "Remaining": 20,
+      "InventoryDateTime": "2021-03-07T00:00:00",
+      "Capacity": 0
+    },
+    {
+      "InventoryDate": "3/8/2021",
+      "Remaining": 20,
+      "InventoryDateTime": "2021-03-08T00:00:00",
+      "Capacity": 0
+    },
+    {
+      "InventoryDate": "3/9/2021",
+      "Remaining": 20,
+      "InventoryDateTime": "2021-03-09T00:00:00",
+      "Capacity": 0
+    },
+    {
+      "InventoryDate": "3/10/2021",
+      "Remaining": 20,
+      "InventoryDateTime": "2021-03-10T00:00:00",
+      "Capacity": 0
+    },
+    {
+      "InventoryDate": "3/11/2021",
+      "Remaining": 20,
+      "InventoryDateTime": "2021-03-11T00:00:00",
+      "Capacity": 0
+    },
+    {
+      "InventoryDate": "3/12/2021",
+      "Remaining": 20,
+      "InventoryDateTime": "2021-03-12T00:00:00",
+      "Capacity": 0
+    },
+    {
+      "InventoryDate": "3/13/2021",
+      "Remaining": 20,
+      "InventoryDateTime": "2021-03-13T00:00:00",
+      "Capacity": 0
+    },
+    {
+      "InventoryDate": "3/14/2021",
+      "Remaining": 20,
+      "InventoryDateTime": "2021-03-14T00:00:00",
+      "Capacity": 0
+    },
+    {
+      "InventoryDate": "3/15/2021",
+      "Remaining": 20,
+      "InventoryDateTime": "2021-03-15T00:00:00",
+      "Capacity": 0
+    },
+    {
+      "InventoryDate": "3/16/2021",
+      "Remaining": 20,
+      "InventoryDateTime": "2021-03-16T00:00:00",
+      "Capacity": 0
+    },
+    {
+      "InventoryDate": "3/17/2021",
+      "Remaining": 20,
+      "InventoryDateTime": "2021-03-17T00:00:00",
+      "Capacity": 0
+    },
+    {
+      "InventoryDate": "3/18/2021",
+      "Remaining": 20,
+      "InventoryDateTime": "2021-03-18T00:00:00",
+      "Capacity": 0
+    },
+    {
+      "InventoryDate": "3/19/2021",
+      "Remaining": 20,
+      "InventoryDateTime": "2021-03-19T00:00:00",
+      "Capacity": 0
+    },
+    {
+      "InventoryDate": "3/20/2021",
+      "Remaining": 20,
+      "InventoryDateTime": "2021-03-20T00:00:00",
+      "Capacity": 0
+    },
+    {
+      "InventoryDate": "3/21/2021",
+      "Remaining": 20,
+      "InventoryDateTime": "2021-03-21T00:00:00",
+      "Capacity": 0
+    },
+    {
+      "InventoryDate": "3/22/2021",
+      "Remaining": 20,
+      "InventoryDateTime": "2021-03-22T00:00:00",
+      "Capacity": 0
+    },
+    {
+      "InventoryDate": "3/23/2021",
+      "Remaining": 20,
+      "InventoryDateTime": "2021-03-23T00:00:00",
+      "Capacity": 0
+    },
+    {
+      "InventoryDate": "3/24/2021",
+      "Remaining": 20,
+      "InventoryDateTime": "2021-03-24T00:00:00",
+      "Capacity": 0
+    },
+    {
+      "InventoryDate": "3/25/2021",
+      "Remaining": 20,
+      "InventoryDateTime": "2021-03-25T00:00:00",
+      "Capacity": 0
+    },
+    {
+      "InventoryDate": "3/26/2021",
+      "Remaining": 20,
+      "InventoryDateTime": "2021-03-26T00:00:00",
+      "Capacity": 0
+    },
+    {
+      "InventoryDate": "3/27/2021",
+      "Remaining": 20,
+      "InventoryDateTime": "2021-03-27T00:00:00",
+      "Capacity": 0
+    },
+    {
+      "InventoryDate": "3/28/2021",
+      "Remaining": 20,
+      "InventoryDateTime": "2021-03-28T00:00:00",
+      "Capacity": 0
+    },
+    {
+      "InventoryDate": "3/29/2021",
+      "Remaining": 20,
+      "InventoryDateTime": "2021-03-29T00:00:00",
+      "Capacity": 0
+    },
+    {
+      "InventoryDate": "3/30/2021",
+      "Remaining": 20,
+      "InventoryDateTime": "2021-03-30T00:00:00",
+      "Capacity": 0
+    },
+    {
+      "InventoryDate": "3/31/2021",
+      "Remaining": 20,
+      "InventoryDateTime": "2021-03-31T00:00:00",
+      "Capacity": 0
+    },
+    {
+      "InventoryDate": "4/1/2021",
+      "Remaining": 20,
+      "InventoryDateTime": "2021-04-01T00:00:00",
+      "Capacity": 0
+    },
+    {
+      "InventoryDate": "4/2/2021",
+      "Remaining": 20,
+      "InventoryDateTime": "2021-04-02T00:00:00",
+      "Capacity": 0
+    },
+    {
+      "InventoryDate": "4/3/2021",
+      "Remaining": 20,
+      "InventoryDateTime": "2021-04-03T00:00:00",
+      "Capacity": 0
+    },
+    {
+      "InventoryDate": "4/4/2021",
+      "Remaining": 20,
+      "InventoryDateTime": "2021-04-04T00:00:00",
+      "Capacity": 0
+    }
+  ],
+  "time": 1609734816298
+}
