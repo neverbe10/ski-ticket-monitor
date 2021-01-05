@@ -5,9 +5,10 @@
   "main": "index.js",
   "scripts": {
     "web": "parcel web/index.html",
-    "start": "web",
+    "start": "parcel web/index.html",
     "dev": "npm run server & npm run web",
-    "server": "node server"
+    "server": "node server",
+    "heroku-postbuild" : "parcel build src/index.html"
   },
   "author": "",
   "license": "ISC",
