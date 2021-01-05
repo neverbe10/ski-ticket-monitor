@@ -8,7 +8,7 @@
     "start": "parcel web/index.html",
     "dev": "npm run server & npm run web",
     "server": "node server",
-    "heroku-postbuild" : "parcel build src/index.html"
+    "heroku-postbuild" : "parcel build web/index.html"
   },
   "author": "",
   "license": "ISC",
