@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "web": "parcel web/index.html",
-    "start": "npm run server & npm run web",
+    "start": "web",
+    "dev": "npm run server & npm run web",
     "server": "node server"
   },
   "author": "",
@@ -20,7 +21,6 @@
     "dotenv-safe": "^8.2.0",
     "fastify": "^3.9.2",
     "fastify-cors": "^5.1.0",
-    "mongoose": "^5.11.10",
     "parcel-bundler": "^1.12.4",
     "playwright": "^1.7.0",
     "prop-types": "^15.7.2",
