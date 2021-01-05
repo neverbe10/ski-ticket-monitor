@@ -33,7 +33,7 @@ module.exports = async function getResortAvailbility(resort) {
         });
         await browser.close();
 
-        return result.sort((a, b) => new Date(a.InventoryDateTime) - new Date(b.InventoryDateTime));
+        return result.sort((a, b) => new Date(a.InventoryDateTime).getTime() - new Date(b.InventoryDateTime).getTime());
     } else {
         throw new Error('resort not exist');
     }

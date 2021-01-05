@@ -18,38 +18,6 @@ import axios from "axios";
 
 import PhoneNumberMask from "./PhoneNumberMask";
 
-const PageWrapper = styled("div")`
-  margin: 40px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  font-family: "Roboto";
-`;
-
-const Selectors = styled("div")`
-  display: flex;
-  flex-direction: row;
-  border-bottom: 1px solid #ccc !important;
-`;
-
-const Selector = styled("div")`
-  margin-top: 16px;
-  margin-left: 8px;
-  margin-bottom: 12px;
-  min-width: 120px;
-`;
-
-const Availability = styled("div")`
-  border-bottom: 1px solid #ccc !important;
-  margin: 16px;
-`;
-
-const Subscribe = styled("div")``;
-
-const DotWrapper = styled('span')`
-  vertical-align: middle;
-`;
-
 const GreenDot = (
   <svg
     width="24"
@@ -75,11 +43,12 @@ const GreyDot = (
 );
 
 export default function App() {
-  const [startDate, setStartDate] = useState(format(new Date(), "MM/dd/yyyy"));
+  const [choosenDate, setChoosenDate] = useState(format(new Date(), "MM/dd/yyyy"));
   const [resort, setResort] = useState("");
   const [resortList, setResortList] = useState([]);
   const [phoneNumber, setphoneNumber] = useState("(   )    -    ");
   const [isAvailable, setIsAvailable] = useState(false);
+  const [resortUrl, setResortUrl] = useState("");
   const [phoneNumberErrorText, setPhoneNumberErrorText] = useState();
   const maxDate = addMonths(new Date(), 3);
 
@@ -94,21 +63,22 @@ export default function App() {
   }, [setResortList]);
 
   useEffect(() => {
-    if (startDate && resort) {
+    if (choosenDate && resort) {
       try {
         axios(
-          `http://localhost:3000/availability/${resort}?date=${startDate}`
+          `http://localhost:3000/availability/${resort}?date=${choosenDate}`
         ).then((res) => {
-          setIsAvailable(res.data > 0);
+          setIsAvailable(res.data.remaining > 0);
+          setResortUrl(res.data.resortUrl);
         });
       } catch (e) {
         console.log(e);
       }
     }
-  }, [resort, startDate, setIsAvailable]);
+  }, [resort, choosenDate, setIsAvailable]);
 
   const handleDateChange = (date) => {
-    setStartDate(format(date, "MM/dd/yyyy"));
+    setChoosenDate(format(date, "MM/dd/yyyy"));
   };
 
   const handlePhoneNumberChange = (e) => {
@@ -116,13 +86,51 @@ export default function App() {
     setPhoneNumberErrorText(undefined);
   };
 
+  const handleSubscribe = () => {
+    if (phoneNumber && choosenDate && resort) {
+      axios.post(`http://localhost:3000/subscribe`, {
+        phoneNumber,
+        choosenDate,
+        resort,
+      });
+    }
+  };
+
   let availability;
 
-  if (isAvailable) {
-    availability = <p>Current Availability: <DotWrapper>{GreenDot}</DotWrapper> (tickets available)</p>;
+  console.log({
+    choosenDate,
+    resort,
+    isAvailable,
+  });
+
+  if (!choosenDate || !resort) {
+    availability = (
+      <Availability>
+        <DisabledText>Current Availability: - - - - - - - - - </DisabledText>
+      </Availability>
+    );
+  } else if (isAvailable) {
+    availability = (
+      <Availability>
+        <p>
+          Current Availability: <DotWrapper>{GreenDot}</DotWrapper>
+          {` `}(tickets available)
+        </p>
+        <i>
+          Get Tickt: <a href={resortUrl}>here</a>
+        </i>
+      </Availability>
+    );
   } else {
     availability = (
-      <p>Current Availability: <DotWrapper>{GreyDot}</DotWrapper> (no tickets remaining)</p>
+      <Availability>
+        <p>
+          Current Availability: <DotWrapper>{GreyDot}</DotWrapper>
+          {` `}(no tickets remaining)
+        </p>
+        <i>*Sign Up for Notification Below</i>
+      </Availability>
     );
   }
 
@@ -139,7 +147,7 @@ export default function App() {
             margin="normal"
             id="date-picker-inline"
             label="Day On The Slope"
-            value={startDate}
+            value={choosenDate}
             onChange={handleDateChange}
             KeyboardButtonProps={{
               "aria-label": "change date",
@@ -167,7 +175,7 @@ export default function App() {
           </FormControl>
         </Selector>
       </Selectors>
-      <Availability>{availability}</Availability>
+      {availability}
       <Subscribe>
         <h3>SMS Notification</h3>
         <FormControl
@@ -193,10 +201,60 @@ export default function App() {
             </FormHelperText>
           )}
         </FormControl>
-        <Button variant="contained" color="primary">
+        <Button variant="contained" color="primary" onClick={handleSubscribe}>
           Subscribe
         </Button>
       </Subscribe>
     </PageWrapper>
   );
 }
+
+const PageWrapper = styled("div")`
+  margin: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Roboto";
+`;
+
+const Selectors = styled("div")`
+  display: flex;
+  flex-direction: row;
+  border-bottom: 1px solid #ccc !important;
+`;
+
+const Selector = styled("div")`
+  margin-top: 16px;
+  margin-left: 8px;
+  margin-bottom: 12px;
+  min-width: 120px;
+`;
+
+const Availability = styled("div")`
+  border-bottom: 1px solid #ccc !important;
+  margin: 16px;
+  display: flex;
+  align-items: center;
+  min-height: 80px;
+  flex-direction: column;
+  justify-content: center;
+  i {
+    font-size: 12px;
+  }
+  p {
+    margin: 8px 0;
+  }
+`;
+
+const Subscribe = styled("div")``;
+
+const DotWrapper = styled("span")`
+  vertical-align: middle;
+`;
+
+const DisabledText = styled("p")`
+  :hover {
+    cursor: not-allowed;
+  }
+  color: grey;
+`;

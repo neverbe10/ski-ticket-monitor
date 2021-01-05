@@ -20,6 +20,7 @@
     "dotenv-safe": "^8.2.0",
     "fastify": "^3.9.2",
     "fastify-cors": "^5.1.0",
+    "mongoose": "^5.11.10",
     "parcel-bundler": "^1.12.4",
     "playwright": "^1.7.0",
     "prop-types": "^15.7.2",
@@ -27,6 +28,7 @@
     "react-dom": "^16.14.0",
     "react-text-mask": "^5.4.3",
     "regenerator-runtime": "^0.13.7",
-    "styled-components": "^5.2.1"
+    "styled-components": "^5.2.1",
+    "twilio": "^3.54.1"
   }
 }

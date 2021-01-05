@@ -1,12 +1,6 @@
 {
   "stevens": [
     {
-      "InventoryDate": "1/3/2021",
-      "Remaining": 20,
-      "InventoryDateTime": "2021-01-03T00:00:00",
-      "Capacity": 0
-    },
-    {
       "InventoryDate": "1/4/2021",
       "Remaining": 20,
       "InventoryDateTime": "2021-01-04T00:00:00",
@@ -290,7 +284,7 @@
     },
     {
       "InventoryDate": "2/20/2021",
-      "Remaining": 20,
+      "Remaining": 0,
       "InventoryDateTime": "2021-02-20T00:00:00",
       "Capacity": 0
     },
@@ -544,23 +538,11 @@
       "InventoryDate": "4/3/2021",
       "Remaining": 20,
       "InventoryDateTime": "2021-04-03T00:00:00",
-      "Capacity": 0
-    },
-    {
-      "InventoryDate": "4/4/2021",
-      "Remaining": 20,
-      "InventoryDateTime": "2021-04-04T00:00:00",
       "Capacity": 0
     }
   ],
   "keystone": [
     {
-      "InventoryDate": "1/3/2021",
-      "Remaining": 20,
-      "InventoryDateTime": "2021-01-03T00:00:00",
-      "Capacity": 0
-    },
-    {
       "InventoryDate": "1/4/2021",
       "Remaining": 20,
       "InventoryDateTime": "2021-01-04T00:00:00",
@@ -1099,13 +1081,7 @@
       "Remaining": 20,
       "InventoryDateTime": "2021-04-03T00:00:00",
       "Capacity": 0
-    },
-    {
-      "InventoryDate": "4/4/2021",
-      "Remaining": 20,
-      "InventoryDateTime": "2021-04-04T00:00:00",
-      "Capacity": 0
     }
   ],
-  "time": 1609734816298
+  "time": 1609801639888
 }
