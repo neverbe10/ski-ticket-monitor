@@ -11,7 +11,7 @@ module.exports = async function getResortAvailbility(resort) {
   try {
     const resortUrl = resortMap[resort];
     if (resortUrl) {
-      const browser = await firefox.launch();
+      const browser = await firefox.launch({ chromiumSandbox: false });
       const context = await browser.newContext();
       const page = await context.newPage();
       const result = [];
