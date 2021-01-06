@@ -47,7 +47,7 @@ fastify.get("/resort-list", (req, reply) => {
   reply.send(resortArray);
 });
 
-fastify.post("/subscribe", (req, reply) => {
+fastify.post("/subscribe", async (req, reply) => {
   const body = req.body;
   await databaseConnection.addSubscription(body);
   reply.send('ok');
