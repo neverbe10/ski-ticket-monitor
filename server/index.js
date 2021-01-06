@@ -49,7 +49,7 @@ fastify.get("/resort-list", (req, reply) => {
 
 fastify.post("/subscribe", (req, reply) => {
   const body = req.body;
-  databaseConnection.addSubscription(body);
+  await databaseConnection.addSubscription(body);
   reply.send('ok');
 });
 
