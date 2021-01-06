@@ -21,8 +21,16 @@ async function updateAvailabilities() {
   while (true) {
     await Promise.all(
       resortArray.map(async (resort) => {
-        const availability = await getAvailability(resort);
-        await databaseConnection.updateAvailability(resort, availability);
+        try {
+          const availability = await getAvailability(resort);
+          await databaseConnection.updateAvailability(resort, availability);
+        } catch(e) {
+          console.error({
+            resort,
+            message: 'unable to get availiability'
+          });
+        }
+        
       })
     );
     const time = Date.now();
