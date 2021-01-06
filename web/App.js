@@ -50,6 +50,7 @@ export default function App() {
   const [isAvailable, setIsAvailable] = useState(false);
   const [resortUrl, setResortUrl] = useState("");
   const [phoneNumberErrorText, setPhoneNumberErrorText] = useState();
+  const [isLoading, setIsLoading] = useState(false);
   const maxDate = addMonths(new Date(), 3);
 
   useEffect(() => {
@@ -87,17 +88,20 @@ export default function App() {
     setPhoneNumberErrorText(undefined);
   };
 
-  const handleSubscribe = () => {
+  const handleSubscribe = async () => {
     if (phoneNumber && choosenDate && resort) {
-      axios.post(`http://localhost:3000/subscribe`, {
-        phoneNumber,
-        choosenDate,
-        resort,
-      });
+      if(!isLoading) {
+        setIsLoading(true);
+        await axios.post(`http://localhost:3000/subscribe`, {
+          phoneNumber,
+          choosenDate,
+          resort,
+        });
+        setIsLoading(false);
+      }
+      
     }
   };
-
-  console.log({choosenDate});
 
   let availability;
 
@@ -105,6 +109,8 @@ export default function App() {
     choosenDate,
     resort,
     isAvailable,
+    isLoading,
+    choosenDate
   });
 
   if (!choosenDate || !resort) {
@@ -204,7 +210,7 @@ export default function App() {
             </FormHelperText>
           )}
         </FormControl>
-        <Button variant="contained" color="primary" onClick={handleSubscribe}>
+        <Button variant="contained" color={"primary"} disabled={isLoading} onClick={handleSubscribe}>
           Subscribe
         </Button>
       </Subscribe>

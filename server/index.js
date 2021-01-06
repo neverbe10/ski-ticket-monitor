@@ -32,7 +32,7 @@ fastify.get("/availability/:resort", async (req, reply) => {
   const resort = req.params.resort;
   const inventoryDate = req.query.date;
   if (resort && inventoryDate) {
-    const res = databaseConnection.getAvailability(resort, inventoryDate);
+    const res = await databaseConnection.getAvailability(resort, inventoryDate);
     reply.send({
       remaining: res,
       resort,
