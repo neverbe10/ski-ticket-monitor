@@ -15,6 +15,12 @@ module.exports = async function getResortAvailbility(resort) {
       const context = await browser.newContext();
       const page = await context.newPage();
       const result = [];
+      page.on("request", (request) =>
+        console.log(">>", request.method(), request.url())
+      );
+      page.on("response", (response) =>
+        console.log("<<", response.status(), response.url())
+      );
       page.route(/.*GetLiftTicketControlReservationInventory.*/, (route) => {
         route
           .request()
