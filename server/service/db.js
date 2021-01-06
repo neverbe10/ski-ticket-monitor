@@ -54,6 +54,12 @@ class DatebaseConnection {
             message: 'insert record',
             doc,
           });
+          if (Remaining > 0) {
+            this.sendOutNotification({
+              resort,
+              choosenDate: inventoryDateTime,
+            });
+          }
         } else if (current[resort] !== Remaining) {
           // when remaining value doesn't match up
           current[resort] = Remaining;
@@ -65,13 +71,14 @@ class DatebaseConnection {
             remaining: Remaining,
             current,
           });
+          if (Remaining > 0) {
+            this.sendOutNotification({
+              resort,
+              choosenDate: inventoryDateTime,
+            });
+          }
         }
-        if (Remaining > 0) {
-          this.sendOutNotification({
-            resort,
-            choosenDate: inventoryDateTime,
-          });
-        }
+        
       })
     );
   }

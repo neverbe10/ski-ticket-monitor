@@ -23,6 +23,10 @@ async function updateAvailabilities() {
       resortArray.map(async (resort) => {
         try {
           const availability = await getAvailability(resort);
+          console.log({
+            message: 'got availability array, writing data to db',
+            resort
+          });
           await databaseConnection.updateAvailability(resort, availability);
         } catch(e) {
           console.error({
