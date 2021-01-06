@@ -49,5 +49,6 @@ module.exports = async function getResortAvailbility(resort) {
     }
   } catch (e) {
     console.error({ message: "get availability failed", e });
+    throw e;
   }
 };
