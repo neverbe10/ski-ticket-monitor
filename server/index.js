@@ -1,4 +1,5 @@
 require("dotenv-safe").config();
+const path = require('path');
 
 const databaseConnection = require('./service/db');
 
@@ -17,6 +18,11 @@ const fastify = require("fastify")({
 
 fastify.register(require("fastify-cors"), {});
 
+// https://github.com/fastify/fastify-static
+fastify.register(require('fastify-static'), {
+  root: path.join(__dirname, '../dist'),
+});
+
 // fastify.get("/availability", async (req, reply) => {
 //   const data = JSON.parse(await fs.readFile("./server/service/data.json"));
 //   reply.send(data);
@@ -27,6 +33,10 @@ fastify.register(require("fastify-cors"), {});
 //   const data = JSON.parse(await fs.readFile("./server/service/data.json"));
 //   reply.send(data[resort]);
 // });
+
+// fastify.get("/test", async (req, reply) => {
+
+// })
 
 fastify.get("/availability/:resort", async (req, reply) => {
   const resort = req.params.resort;

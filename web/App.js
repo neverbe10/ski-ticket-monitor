@@ -70,7 +70,7 @@ export default function App() {
 
   useEffect(() => {
     try {
-      axios("http://localhost:3000/resort-list").then((res) => {
+      axios("/resort-list").then((res) => {
         setResortList(res.data);
       });
     } catch (e) {
@@ -82,7 +82,7 @@ export default function App() {
     if (choosenDate && resort) {
       try {
         axios(
-          `http://localhost:3000/availability/${resort}?date=${choosenDate}`
+          `/availability/${resort}?date=${choosenDate}`
         ).then((res) => {
           setIsAvailable(res.data.remaining > 0);
           setResortUrl(res.data.resortUrl);
@@ -107,7 +107,7 @@ export default function App() {
     if (phoneNumber && choosenDate && resort) {
       if (!isLoading) {
         setIsLoading(true);
-        await axios.post(`http://localhost:3000/subscribe`, {
+        await axios.post(`/subscribe`, {
           phoneNumber,
           choosenDate,
           resort,
