@@ -31,7 +31,8 @@ async function updateAvailabilities() {
         } catch(e) {
           console.error({
             resort,
-            message: 'unable to get availiability'
+            message: 'unable to get availiability',
+            e
           });
         }
         
