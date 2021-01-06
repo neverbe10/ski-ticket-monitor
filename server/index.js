@@ -60,7 +60,7 @@ fastify.post("/subscribe", async (req, reply) => {
 });
 
 // Run the server!
-fastify.listen(3000, (err, address) => {
+fastify.listen(process.env.PORT, (err, address) => {
   if (err) throw err;
   fastify.log.info(`server listening on ${address}`);
 });
