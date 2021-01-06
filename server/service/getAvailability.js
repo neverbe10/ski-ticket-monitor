@@ -35,6 +35,7 @@ module.exports = async function getResortAvailbility(resort) {
 
       await page.goto(resortUrl, {
         waitUntil: "networkidle",
+        timeout: 0,
       });
       await browser.close();
 
