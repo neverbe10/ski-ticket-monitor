@@ -1,7 +1,6 @@
 require("dotenv-safe").config();
-const fs = require("fs").promises;
 
-const notification = require('./service/notification');
+const databaseConnection = require('./service/db');
 
 require('./service/dataStorage')();
 
@@ -18,10 +17,10 @@ const fastify = require("fastify")({
 
 fastify.register(require("fastify-cors"), {});
 
-fastify.get("/availability", async (req, reply) => {
-  const data = JSON.parse(await fs.readFile("./server/service/data.json"));
-  reply.send(data);
-});
+// fastify.get("/availability", async (req, reply) => {
+//   const data = JSON.parse(await fs.readFile("./server/service/data.json"));
+//   reply.send(data);
+// });
 
 // fastify.get("/availability/:resort", async (req, reply) => {
 //   const resort = req.params.resort;
@@ -33,12 +32,9 @@ fastify.get("/availability/:resort", async (req, reply) => {
   const resort = req.params.resort;
   const inventoryDate = req.query.date;
   if (resort && inventoryDate) {
-    const data = JSON.parse(await fs.readFile("./server/service/data.json"));
-    const { Remaining } = data[resort].find(
-      (obj) => new Date(obj.InventoryDate).getTime() === new Date(inventoryDate).getTime()
-    );
+    const res = databaseConnection.getAvailability(resort, inventoryDate);
     reply.send({
-      remaining: Remaining,
+      remaining: res,
       resort,
       resortUrl: resortMap[resort]
     });
@@ -51,13 +47,9 @@ fastify.get("/resort-list", (req, reply) => {
   reply.send(resortArray);
 });
 
-fastify.get("/watch-list", (req, reply) => {
-  reply.send(notification.getWatchList());
-});
-
 fastify.post("/subscribe", (req, reply) => {
   const body = req.body;
-  notification.subscribe(body);
+  databaseConnection.addSubscription(body);
   reply.send('ok');
 });
 

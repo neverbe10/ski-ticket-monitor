@@ -78,6 +78,7 @@ export default function App() {
   }, [resort, choosenDate, setIsAvailable]);
 
   const handleDateChange = (date) => {
+    console.log({date});
     setChoosenDate(format(date, "MM/dd/yyyy"));
   };
 
@@ -95,6 +96,8 @@ export default function App() {
       });
     }
   };
+
+  console.log({choosenDate});
 
   let availability;
 
