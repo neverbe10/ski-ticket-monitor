@@ -24,7 +24,7 @@
     "fastify-static": "^3.3.1",
     "mongodb": "^3.6.3",
     "parcel-bundler": "^1.12.4",
-    "playwright-firefox": "^1.7.1",
+    "playwright-firefox": "^1.5.1",
     "react": "^16.14.0",
     "react-dom": "^16.14.0",
     "react-text-mask": "^5.4.3",
