@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import styled from "styled-components";
 import "date-fns";
 import { format } from "date-fns";
@@ -42,8 +42,23 @@ const GreyDot = (
   </svg>
 );
 
+function Donate() {
+  const ref = useRef();
+  useEffect(() => {
+    if (ref && ref.current) {
+      const button = document.getElementById("buymeacoffee");
+      button.style.display = "";
+      ref.current.appendChild(button);
+    }
+  }, [ref]);
+
+  return <div ref={ref} />;
+}
+
 export default function App() {
-  const [choosenDate, setChoosenDate] = useState(format(new Date(), "MM/dd/yyyy"));
+  const [choosenDate, setChoosenDate] = useState(
+    format(new Date(), "MM/dd/yyyy")
+  );
   const [resort, setResort] = useState("");
   const [resortList, setResortList] = useState([]);
   const [phoneNumber, setphoneNumber] = useState("(   )    -    ");
@@ -79,7 +94,7 @@ export default function App() {
   }, [resort, choosenDate, setIsAvailable]);
 
   const handleDateChange = (date) => {
-    console.log({date});
+    console.log({ date });
     setChoosenDate(format(date, "MM/dd/yyyy"));
   };
 
@@ -90,7 +105,7 @@ export default function App() {
 
   const handleSubscribe = async () => {
     if (phoneNumber && choosenDate && resort) {
-      if(!isLoading) {
+      if (!isLoading) {
         setIsLoading(true);
         await axios.post(`http://localhost:3000/subscribe`, {
           phoneNumber,
@@ -99,7 +114,6 @@ export default function App() {
         });
         setIsLoading(false);
       }
-      
     }
   };
 
@@ -110,7 +124,7 @@ export default function App() {
     resort,
     isAvailable,
     isLoading,
-    choosenDate
+    choosenDate,
   });
 
   if (!choosenDate || !resort) {
@@ -145,8 +159,9 @@ export default function App() {
 
   return (
     <PageWrapper>
-      <h1>Ski Ticket Monitor</h1>
-      <i>Go Skiing Every Weekend</i>
+      <Donate />
+        <h1>Ski Ticket Monitor</h1>
+        <i>Go Skiing Every Weekend</i>
       <Selectors>
         <MuiPickersUtilsProvider utils={DateFnsUtils}>
           <KeyboardDatePicker
@@ -210,7 +225,12 @@ export default function App() {
             </FormHelperText>
           )}
         </FormControl>
-        <Button variant="contained" color={"primary"} disabled={isLoading} onClick={handleSubscribe}>
+        <Button
+          variant="contained"
+          color={"primary"}
+          disabled={isLoading}
+          onClick={handleSubscribe}
+        >
           Subscribe
         </Button>
       </Subscribe>
@@ -224,6 +244,11 @@ const PageWrapper = styled("div")`
   flex-direction: column;
   align-items: center;
   font-family: "Roboto";
+  > div:first-child {
+    position: absolute;
+    top: 32px;
+    right: 16px;
+  }
 `;
 
 const Selectors = styled("div")`
