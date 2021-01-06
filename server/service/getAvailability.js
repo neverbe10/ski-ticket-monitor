@@ -8,13 +8,13 @@ const resortMap = {
 };
 
 module.exports = async function getResortAvailbility(resort) {
+  const result = [];
   try {
     const resortUrl = resortMap[resort];
     if (resortUrl) {
       const browser = await firefox.launch({ chromiumSandbox: false });
       const context = await browser.newContext();
       const page = await context.newPage();
-      const result = [];
       page.route(/.*GetLiftTicketControlReservationInventory.*/, (route) => {
         route
           .request()
@@ -48,7 +48,11 @@ module.exports = async function getResortAvailbility(resort) {
       throw new Error("resort not exist");
     }
   } catch (e) {
-    console.error({ message: "get availability failed", e });
+    console.error({ 
+      message: "get availability failed", 
+      e, 
+      resultLength : result.length,
+    });
     throw e;
   }
 };

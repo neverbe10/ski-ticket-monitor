@@ -32,7 +32,7 @@ async function updateAvailabilities() {
           console.error({
             resort,
             message: 'unable to get availiability',
-            e
+            errorMessage: e.message
           });
         }
         
