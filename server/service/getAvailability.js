@@ -9,7 +9,8 @@ const resortMap = {
 
 module.exports = async function getResortAvailbility(resort) {
   try {
-    const resortUrl = resortMap[resort];
+    // const resortUrl = resortMap[resort];
+    const resortUrl = "https://github.com/microsoft/playwright"
     if (resortUrl) {
       const browser = await firefox.launch({ chromiumSandbox: false });
       const context = await browser.newContext();
@@ -21,34 +22,36 @@ module.exports = async function getResortAvailbility(resort) {
       page.on("response", (response) =>
         console.log("<<", response.status(), response.url())
       );
-      page.route(/.*GetLiftTicketControlReservationInventory.*/, (route) => {
-        route
-          .request()
-          .response()
-          .then((response) => {
-            response
-              .body()
-              .then((b) => {
-                const arr = JSON.parse(b.toString());
-                result.push(...arr);
-              })
-              .catch((err) => {
-                throw err;
-              });
-          });
-        route.continue();
-      });
+      // page.route(/.*GetLiftTicketControlReservationInventory.*/, (route) => {
+      //   route
+      //     .request()
+      //     .response()
+      //     .then((response) => {
+      //       response
+      //         .body()
+      //         .then((b) => {
+      //           const arr = JSON.parse(b.toString());
+      //           result.push(...arr);
+      //         })
+      //         .catch((err) => {
+      //           throw err;
+      //         });
+      //     });
+      //   route.continue();
+      // });
 
       await page.goto(resortUrl, {
         waitUntil: "networkidle",
       });
       await browser.close();
 
-      return result.sort(
-        (a, b) =>
-          new Date(a.InventoryDateTime).getTime() -
-          new Date(b.InventoryDateTime).getTime()
-      );
+      // return result.sort(
+      //   (a, b) =>
+      //     new Date(a.InventoryDateTime).getTime() -
+      //     new Date(b.InventoryDateTime).getTime()
+      // );
+
+      return [];
     } else {
       throw new Error("resort not exist");
     }
