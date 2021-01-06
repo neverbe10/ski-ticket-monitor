@@ -34,10 +34,6 @@ fastify.register(require('fastify-static'), {
 //   reply.send(data[resort]);
 // });
 
-// fastify.get("/test", async (req, reply) => {
-
-// })
-
 fastify.get("/availability/:resort", async (req, reply) => {
   const resort = req.params.resort;
   const inventoryDate = req.query.date;
