@@ -21,6 +21,7 @@
     "date-fns": "^2.16.1",
     "dotenv-safe": "^8.2.0",
     "fastify": "^3.9.2",
+    "fastify-formbody": "^5.0.0",
     "fastify-static": "^3.3.1",
     "mongodb": "^3.6.3",
     "parcel-bundler": "^1.12.4",

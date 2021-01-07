@@ -16,6 +16,8 @@ const fastify = require("fastify")({
   logger: true,
 });
 
+fastify.register(require('fastify-formbody'));
+
 // fastify.register(require("fastify-cors"), {});
 
 // https://github.com/fastify/fastify-static
