@@ -59,8 +59,29 @@ fastify.post("/subscribe", async (req, reply) => {
   reply.send('ok');
 });
 
+// Message example: UNSUBSCRIBE 02/20/2021 STEVENS
+fastify.post("/unsubscribe", async (req, reply) => {
+  const body = req.body.Body;
+  const phoneNumber = req.body.From;
+  if(!body || !phoneNumber) {
+    console.log({body: req.body});
+    throw new Error("params are not formatted correctly");
+  }
+  const parsed = body.split(' ');
+  if(parsed.length !== 3 || (parsed.length > 1 && parsed[0].toUpperCase() !== 'UNSUBSCRIBE')) {
+    reply.send(`<Response><Message>Sorry I don't understand</Message></Response>`);
+  } else {
+    const bool = await databaseConnection.deleteSubscription({phoneNumber, choosenDate: parsed[1], resort: parsed[2]});
+    if(bool) {
+      reply.send(`<Response><Message>Unsubscribe successful</Message></Response>`);
+    } else {
+      reply.send(`<Response><Message>Something went wrong</Message></Response>`);
+    }
+  }
+});
+
 // Run the server!
-fastify.listen(process.env.PORT, '0.0.0.0', (err, address) => {
+fastify.listen(process.env.PORT, (err, address) => {
   if (err) throw err;
   fastify.log.info(`server listening on ${address}`);
 });
