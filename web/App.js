@@ -280,7 +280,7 @@ export default function App() {
           her tickets. Because the weather forecast called for clouds, I was
           concerned about safety, so I told her that I would think about it. The
           next morning, I told her I decided to go. Unfortunately, she told me
-          the tickets are all gone. Was I going to be suck at home for
+          the tickets are all gone. Was I going to be stuck at home for
           Christmas? I spent all day refreshing the website, hoping to get a
           ticket. Right when I was about to give up, I thought, “Why don’t I
           write a small application to notify me when a slot opens up?”
@@ -304,9 +304,8 @@ export default function App() {
         <p className={'story'}>
           I’m paying the domain, Twilio (SMS), and server fees out of pocket,
           and I’ve spent a lot of time on this. I am working to add more resorts
-          as fast as I can. Every bit of support I get makes a big difference
-          (and it’s really helps me stay motivated), so please consider making a
-          small donation, if you can.
+          as fast as I can. Every bit of support I get makes a big difference for me, 
+          so please consider making a small donation, if you can.
         </p>
 
         <Donate/>
