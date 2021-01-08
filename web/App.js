@@ -125,6 +125,7 @@ export default function App() {
     isAvailable,
     isLoading,
     choosenDate,
+    resortList
   });
 
   if (!choosenDate || !resort) {
@@ -141,7 +142,7 @@ export default function App() {
           {` `}(tickets available)
         </p>
         <i>
-          Get Tickt: <a href={resortUrl}>here</a>
+          Get Tickt: <a href={resortUrl} target="_blank" rel="noopener noreferrer">here</a>
         </i>
       </Availability>
     );
@@ -190,7 +191,7 @@ export default function App() {
               value={resort}
               onChange={(event) => setResort(event.target.value)}
             >
-              {resortList.map((resort, index) => (
+              {resortList && resortList.map((resort, index) => (
                 <MenuItem value={resort} key={index}>
                   {resort}
                 </MenuItem>
@@ -240,7 +241,7 @@ export default function App() {
 }
 
 const PageWrapper = styled("div")`
-  margin: 40px;
+  margin: 80px 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -256,6 +257,7 @@ const Selectors = styled("div")`
   display: flex;
   flex-direction: row;
   border-bottom: 1px solid #ccc !important;
+  min-width: 335px;
 `;
 
 const Selector = styled("div")`
@@ -279,10 +281,12 @@ const Availability = styled("div")`
   p {
     margin: 8px 0;
   }
+  min-width: 335px;
 `;
 
 const Subscribe = styled("div")`
-  margin-bottom: 12px;
+  margin-bottom: 24px;
+  min-width: 335px;
 `;
 
 const DotWrapper = styled("span")`
