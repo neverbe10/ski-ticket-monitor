@@ -17,6 +17,7 @@ import {
 import axios from "axios";
 
 import PhoneNumberMask from "./PhoneNumberMask";
+import SnowContainer from './SnowContainer';
 
 const GreenDot = (
   <svg
@@ -47,8 +48,10 @@ function Donate() {
   useEffect(() => {
     if (ref && ref.current) {
       const button = document.getElementById("buymeacoffee");
-      button.style.display = "";
-      ref.current.appendChild(button);
+      if (button) {
+        button.style.display = "";
+        ref.current.appendChild(button);
+      }
     }
   }, [ref]);
 
@@ -161,8 +164,8 @@ export default function App() {
   return (
     <PageWrapper>
       <Donate />
-        <h1>Ski Ticket Monitor</h1>
-        <i>Go Skiing Every Weekend</i>
+      <h1>Ski Ticket Monitor</h1>
+      <p><em>Go Skiing Every Weekend</em></p>
       <Selectors>
         <MuiPickersUtilsProvider utils={DateFnsUtils}>
           <KeyboardDatePicker
@@ -235,21 +238,40 @@ export default function App() {
           Subscribe
         </Button>
       </Subscribe>
-      <i>*This website is not run by or affiliated with Vail Resorts</i>
+      <p className="disclaimer"><em>This website is not run by or affiliated with Vail Resorts</em></p>
+      <SnowContainer/>
     </PageWrapper>
   );
 }
 
 const PageWrapper = styled("div")`
-  margin: 80px 20px;
+  background-color: rgba(255, 255, 255, .9);
+  padding: 12px 24px;
+  margin: 80px auto;
   display: flex;
+  max-width: 400px;
+  border-radius: 4px;
   flex-direction: column;
   align-items: center;
-  font-family: "Roboto";
+  
   > div:first-child {
     position: absolute;
     top: 32px;
     right: 16px;
+  }
+
+  h1 {
+    font-size: 36px;
+    font-family: 'Kalam', cursive;
+    margin-bottom: 0;
+  }
+
+  h1 + p {
+    margin-top: 6px;
+  }
+
+  .disclaimer {
+    color: #999999;
   }
 `;
 
