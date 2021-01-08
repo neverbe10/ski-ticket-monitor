@@ -18,6 +18,7 @@ import axios from "axios";
 
 import PhoneNumberMask from "./PhoneNumberMask";
 import SnowContainer from "./SnowContainer";
+import venmo from './venmo.jpg';
 
 const GreenDot = (
   <svg
@@ -174,90 +175,149 @@ export default function App() {
   }
 
   return (
-    <PageWrapper>
-      <Donate />
-      <h1>Ski Ticket Monitor</h1>
-      <p>
-        <em>Go Skiing Every Weekend</em>
-      </p>
-      <Selectors>
-        <MuiPickersUtilsProvider utils={DateFnsUtils}>
-          <KeyboardDatePicker
-            disableToolbar
-            variant="inline"
-            format="MM/dd/yyyy"
-            margin="normal"
-            id="date-picker-inline"
-            label="Day On The Slope"
-            value={choosenDate}
-            onChange={handleDateChange}
-            KeyboardButtonProps={{
-              "aria-label": "change date",
-            }}
-            maxDate={maxDate}
+    <>
+      <PageWrapper>
+        <Donate />
+        <h1>Ski Ticket Monitor</h1>
+        <p>
+          <em>Go Skiing Every Weekend</em>
+        </p>
+        <Selectors>
+          <MuiPickersUtilsProvider utils={DateFnsUtils}>
+            <KeyboardDatePicker
+              disableToolbar
+              variant="inline"
+              format="MM/dd/yyyy"
+              margin="normal"
+              id="date-picker-inline"
+              label="Day On The Slope"
+              value={choosenDate}
+              onChange={handleDateChange}
+              KeyboardButtonProps={{
+                "aria-label": "change date",
+              }}
+              maxDate={maxDate}
+              fullWidth
+              disablePast
+            />
+          </MuiPickersUtilsProvider>
+          <Selector>
+            <FormControl fullWidth disabled={resortList.length === 0}>
+              <InputLabel id="demo-simple-select-label">Resort</InputLabel>
+              <Select
+                labelId="demo-simple-select-label"
+                id="demo-simple-select"
+                value={resort}
+                onChange={(event) => setResort(event.target.value)}
+              >
+                {resortList &&
+                  resortList.map((resort, index) => (
+                    <MenuItem value={resort} key={index}>
+                      {resort}
+                    </MenuItem>
+                  ))}
+              </Select>
+            </FormControl>
+          </Selector>
+        </Selectors>
+        {availability}
+        <Subscribe>
+          <h3>SMS Notification</h3>
+          <p>
+            Subscribe to SMS notification and you will receive an text as soon
+            as an opening is spotted
+          </p>
+          <FormControl
             fullWidth
-            disablePast
-          />
-        </MuiPickersUtilsProvider>
-        <Selector>
-          <FormControl fullWidth disabled={resortList.length === 0}>
-            <InputLabel id="demo-simple-select-label">Resort</InputLabel>
-            <Select
-              labelId="demo-simple-select-label"
-              id="demo-simple-select"
-              value={resort}
-              onChange={(event) => setResort(event.target.value)}
-            >
-              {resortList &&
-                resortList.map((resort, index) => (
-                  <MenuItem value={resort} key={index}>
-                    {resort}
-                  </MenuItem>
-                ))}
-            </Select>
+            error={!!phoneNumberErrorText}
+            margin="dense"
+            variant="outlined"
+          >
+            <InputLabel htmlFor="formatted-text-mask-input">
+              phone number
+            </InputLabel>
+            <OutlinedInput
+              autoFocus={true}
+              value={phoneNumber}
+              onChange={handlePhoneNumberChange}
+              id="formatted-text-mask-input"
+              inputComponent={PhoneNumberMask}
+              label="phone number"
+            />
+            {phoneNumberErrorText && (
+              <FormHelperText id="component-error-text">
+                {phoneNumberErrorText}
+              </FormHelperText>
+            )}
           </FormControl>
-        </Selector>
-      </Selectors>
-      {availability}
-      <Subscribe>
-        <h3>SMS Notification</h3>
-        <FormControl
-          fullWidth
-          error={!!phoneNumberErrorText}
-          margin="dense"
-          variant="outlined"
-        >
-          <InputLabel htmlFor="formatted-text-mask-input">
-            phone number
-          </InputLabel>
-          <OutlinedInput
-            autoFocus={true}
-            value={phoneNumber}
-            onChange={handlePhoneNumberChange}
-            id="formatted-text-mask-input"
-            inputComponent={PhoneNumberMask}
-            label="phone number"
-          />
-          {phoneNumberErrorText && (
-            <FormHelperText id="component-error-text">
-              {phoneNumberErrorText}
-            </FormHelperText>
-          )}
-        </FormControl>
-        <Button
-          variant="contained"
-          color={"primary"}
-          disabled={isLoading}
-          onClick={handleSubscribe}
-        >
-          Subscribe
-        </Button>
-      </Subscribe>
-      <p className="disclaimer">
-        <em>This website is not run by or affiliated with Vail Resorts</em>
-      </p>
-      <SnowContainer />
-    </PageWrapper>
+          <Button
+            variant="contained"
+            color={"primary"}
+            disabled={isLoading}
+            onClick={handleSubscribe}
+          >
+            Subscribe
+          </Button>
+        </Subscribe>
+        <p className="disclaimer">
+          <em>This website is not run by or affiliated with Vail Resorts</em>
+        </p>
+        <SnowContainer />
+      </PageWrapper>
+      <PageWrapper>
+        <h1>My Story</h1>
+        <p className={'story'}>
+          Skiing is one of my favorite activities of the winter season. I was
+          itching to get back outside and enjoy some fresh powder after spending
+          nearly a year cooped up at home. I took a day off from work and went
+          skiing with my friends at Stevens Pass Resort. It was amazing.
+        </p>
+
+        <p className={'story'}>
+          Like so many others, I didn’t have plans for Christmas this year. I
+          spent the week before Christmas looking for some fun activities. My
+          friend invited me to a two day skiing trip with her. She already had
+          her tickets. Because the weather forecast called for clouds, I was
+          concerned about safety, so I told her that I would think about it. The
+          next morning, I told her I decided to go. Unfortunately, she told me
+          the tickets are all gone. Was I going to be suck at home for
+          Christmas? I spent all day refreshing the website, hoping to get a
+          ticket. Right when I was about to give up, I thought, “Why don’t I
+          write a small application to notify me when a slot opens up?”
+        </p>
+
+        <p className={'story'}>
+          I was on vacation (which had piled up due to COVID), so I had plenty
+          of free time, and I was eager to go skiing with my friend. With a lot
+          of help from Stack Overflow, I wrote a simple app and was able to get
+          tickets that same day. I was psyched!
+        </p>
+
+        <p className={'story'}>
+          After I returned from the skiing trip, I was excited to take this
+          little project further. Maybe I could help other people in the same
+          position get tickets, too! Taking time off from work to go skiing in
+          the middle of the week is a luxury that only some can afford. I think
+          we should all be able to go skiing every weekend.{" "}
+        </p>
+
+        <p className={'story'}>
+          I’m paying the domain, Twilio (SMS), and server fees out of pocket,
+          and I’ve spent a lot of time on this. I am working to add more resorts
+          as fast as I can. Every bit of support I get makes a big difference
+          (and it’s really helps me stay motivated), so please consider making a
+          small donation, if you can.
+        </p>
+
+        <Donate/>
+        <img src={venmo} width={244} />
+
+        <p className={'story'}>
+        See you on the slopes,<br/>10Chen <br/>Jan 8th, 2020
+        </p>
+        
+      </PageWrapper>
+    </>
   );
 }
 
@@ -289,6 +349,11 @@ const PageWrapper = styled("div")`
 
   .disclaimer {
     color: #999999;
+  }
+
+  .story {
+    font-family: "Kalam", cursive;
+    color: #2e2e2e;
   }
 `;
 
@@ -325,7 +390,16 @@ const Availability = styled("div")`
 
 const Subscribe = styled("div")`
   margin-bottom: 24px;
-  min-width: 335px;
+  width: 335px;
+  h3 {
+    margin-bottom: 8px;
+  }
+  p {
+    margin-bottom: 16px;
+    margin-top: 8px;
+    font-size: 14px;
+    color: grey;
+  }
 `;
 
 const DotWrapper = styled("span")`

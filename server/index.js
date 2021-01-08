@@ -3,7 +3,7 @@ const path = require('path');
 
 const databaseConnection = require('./service/db');
 
-require('./service/dataStorage')();
+require('./service/refreshAvailability')();
 
 const resortArray = ["keystone", "stevens"];
 const resortMap = {
