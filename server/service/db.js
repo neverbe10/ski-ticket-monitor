@@ -96,7 +96,7 @@ class DatebaseConnection {
   async addSubscription({ phoneNumber, choosenDate, resort }) {
     await this.ready;
     choosenDate = format(new Date(choosenDate), "MM/dd/yyyy");
-    phoneNumber = phoneNumber.replace(/\D/g, "");
+    phoneNumber = "1" + phoneNumber.replace(/\D/g, ""); //hardcode US prefix
     const collection = this.db.collection("subscription");
     const current = await collection.findOne({ key: choosenDate });
     if (!current) { // when date is missing

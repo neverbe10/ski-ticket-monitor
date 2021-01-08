@@ -71,13 +71,13 @@ fastify.post("/unsubscribe", async (req, reply) => {
   }
   const parsed = body.split(' ');
   if(parsed.length !== 3 || (parsed.length > 1 && parsed[0].toUpperCase() !== 'UNSUBSCRIBE')) {
-    reply.send(`<Response><Message>Sorry I don't understand</Message></Response>`);
+    reply.send(`Sorry I don't understand`);
   } else {
     const bool = await databaseConnection.deleteSubscription({phoneNumber, choosenDate: parsed[1], resort: parsed[2]});
     if(bool) {
-      reply.send(`<Response><Message>Unsubscribe successful</Message></Response>`);
+      reply.send(`Unsubscribe successful`);
     } else {
-      reply.send(`<Response><Message>Something went wrong</Message></Response>`);
+      reply.send(`Something went wrong`);
     }
   }
 });
