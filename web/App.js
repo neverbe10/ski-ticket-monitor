@@ -17,7 +17,7 @@ import {
 import axios from "axios";
 
 import PhoneNumberMask from "./PhoneNumberMask";
-import SnowContainer from './SnowContainer';
+import SnowContainer from "./SnowContainer";
 
 const GreenDot = (
   <svg
@@ -72,6 +72,17 @@ export default function App() {
   const maxDate = addMonths(new Date(), 3);
 
   useEffect(() => {
+    if (window.location.hostname !== "localhost") {
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-9MRSPLM5TY");
+    }
+  }, []);
+
+  useEffect(() => {
     try {
       axios("/resort-list").then((res) => {
         setResortList(res.data);
@@ -84,9 +95,7 @@ export default function App() {
   useEffect(() => {
     if (choosenDate && resort) {
       try {
-        axios(
-          `/availability/${resort}?date=${choosenDate}`
-        ).then((res) => {
+        axios(`/availability/${resort}?date=${choosenDate}`).then((res) => {
           setIsAvailable(res.data.remaining > 0);
           setResortUrl(res.data.resortUrl);
         });
@@ -128,7 +137,7 @@ export default function App() {
     isAvailable,
     isLoading,
     choosenDate,
-    resortList
+    resortList,
   });
 
   if (!choosenDate || !resort) {
@@ -145,7 +154,10 @@ export default function App() {
           {` `}(tickets available)
         </p>
         <i>
-          Get Tickt: <a href={resortUrl} target="_blank" rel="noopener noreferrer">here</a>
+          Get Tickt:{" "}
+          <a href={resortUrl} target="_blank" rel="noopener noreferrer">
+            here
+          </a>
         </i>
       </Availability>
     );
@@ -165,7 +177,9 @@ export default function App() {
     <PageWrapper>
       <Donate />
       <h1>Ski Ticket Monitor</h1>
-      <p><em>Go Skiing Every Weekend</em></p>
+      <p>
+        <em>Go Skiing Every Weekend</em>
+      </p>
       <Selectors>
         <MuiPickersUtilsProvider utils={DateFnsUtils}>
           <KeyboardDatePicker
@@ -194,11 +208,12 @@ export default function App() {
               value={resort}
               onChange={(event) => setResort(event.target.value)}
             >
-              {resortList && resortList.map((resort, index) => (
-                <MenuItem value={resort} key={index}>
-                  {resort}
-                </MenuItem>
-              ))}
+              {resortList &&
+                resortList.map((resort, index) => (
+                  <MenuItem value={resort} key={index}>
+                    {resort}
+                  </MenuItem>
+                ))}
             </Select>
           </FormControl>
         </Selector>
@@ -238,14 +253,16 @@ export default function App() {
           Subscribe
         </Button>
       </Subscribe>
-      <p className="disclaimer"><em>This website is not run by or affiliated with Vail Resorts</em></p>
-      <SnowContainer/>
+      <p className="disclaimer">
+        <em>This website is not run by or affiliated with Vail Resorts</em>
+      </p>
+      <SnowContainer />
     </PageWrapper>
   );
 }
 
 const PageWrapper = styled("div")`
-  background-color: rgba(255, 255, 255, .9);
+  background-color: rgba(255, 255, 255, 0.9);
   padding: 12px 24px;
   margin: 80px auto;
   display: flex;
@@ -253,7 +270,7 @@ const PageWrapper = styled("div")`
   border-radius: 4px;
   flex-direction: column;
   align-items: center;
-  
+
   > div:first-child {
     position: absolute;
     top: 32px;
@@ -262,7 +279,7 @@ const PageWrapper = styled("div")`
 
   h1 {
     font-size: 36px;
-    font-family: 'Kalam', cursive;
+    font-family: "Kalam", cursive;
     margin-bottom: 0;
   }
 
