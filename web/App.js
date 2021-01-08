@@ -234,6 +234,7 @@ export default function App() {
           Subscribe
         </Button>
       </Subscribe>
+      <i>*This website is not run by or affiliated with Vail Resorts</i>
     </PageWrapper>
   );
 }
@@ -280,7 +281,9 @@ const Availability = styled("div")`
   }
 `;
 
-const Subscribe = styled("div")``;
+const Subscribe = styled("div")`
+  margin-bottom: 12px;
+`;
 
 const DotWrapper = styled("span")`
   vertical-align: middle;

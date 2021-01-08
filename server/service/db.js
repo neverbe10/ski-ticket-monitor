@@ -50,7 +50,7 @@ class DatebaseConnection {
           };
           await collection.insertOne(doc);
           console.log({
-            message: "insert record",
+            message: "inserting record",
             doc,
           });
           if (Remaining > 0) {
