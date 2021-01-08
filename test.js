@@ -30,12 +30,16 @@
 // })();
 
 const { MongoClient } = require("mongodb");
+const { format } = require('date-fns');
 
 async function test() {
-  const dbClient = new MongoClient("mongodb+srv://Elaine:3PpsBUKrTtK5eHr@cluster0.vninh.mongodb.net/ski-ticket?retryWrites=true&w=majority", {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  });
+  const dbClient = new MongoClient(
+    "mongodb+srv://Elaine:3PpsBUKrTtK5eHr@cluster0.vninh.mongodb.net/ski-ticket?retryWrites=true&w=majority",
+    {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+    }
+  );
   await dbClient.connect();
   const db = dbClient.db("ski-ticket");
   // const collection = this.db.collection('availability');
@@ -54,29 +58,39 @@ async function test() {
   // await collection.replaceOne({key: '2021-01-04T00:00:00'}, current);
   addSubscription({
     db,
-    phoneNumber: 4087484652,
-    choosenDate: '2021-01-30T00:00:00',
-    resort: 'stevens'
+    phoneNumber: "4087484652",
+    choosenDate: "2021-01-30T00:00:00",
+    resort: "stevens",
   });
-  console.log('done');
+  console.log("done");
 }
 
 async function addSubscription({ db, phoneNumber, choosenDate, resort }) {
-  const collection = db.collection('subscription');
-    const current = await collection.findOne({ key: choosenDate });
-    if (!current) { // when date is missing
-      const doc = {
-        key: choosenDate,
-        [resort]: [ phoneNumber ],
-      }
-      await collection.insertOne(doc);
-    } else if (!current[resort]) { 
-      current[resort] = [ phoneNumber ];
-      await collection.replaceOne({key: choosenDate}, current);
-    } else if (current[resort].indexOf(phoneNumber)){
-      current[resort].push(phoneNumber);
-      await collection.replaceOne({key: choosenDate}, current);
-    }
+  console.log({phoneNumber, choosenDate, resort});
+  choosenDate = format(
+    new Date(choosenDate),
+    'MM/dd/yyyy'
+  );
+  phoneNumber = phoneNumber.replace(/\D/g, '');
+  const collection = db.collection("subscription");
+  const current = await collection.findOne({ key: choosenDate });
+
+  if (!current) {
+    // when date is missing
+    const doc = {
+      key: choosenDate,
+      [resort]: [phoneNumber],
+    };
+    await collection.insertOne(doc);
+  } else if (!current[resort]) {
+    current[resort] = [phoneNumber];
+    await collection.replaceOne({ key: choosenDate }, current);
+  } else if (!current[resort].includes(phoneNumber)) {
+    current[resort].push(phoneNumber);
+    await collection.replaceOne({ key: choosenDate }, current);
+  } else {
+    console.log('no update');
+  }
 }
 test();
 // const REFRESH_INTERVAL = 60000; //ms

@@ -144,6 +144,12 @@ class DatebaseConnection {
       return false;
     }
   }
+
+  // async getSubscriberCount() {
+  //   await this.ready;
+  //   const collection = this.db.collection("subscription");
+  //   collection.aggregate
+  // }
 }
 
 const databaseConnection = new DatebaseConnection();
