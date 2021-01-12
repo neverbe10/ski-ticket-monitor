@@ -18,7 +18,7 @@ import axios from "axios";
 
 import PhoneNumberMask from "./PhoneNumberMask";
 import SnowContainer from "./SnowContainer";
-import venmo from './venmo.jpg';
+import venmo from "./venmo.jpg";
 
 const GreenDot = (
   <svg
@@ -96,7 +96,8 @@ export default function App() {
   useEffect(() => {
     if (choosenDate && resort) {
       try {
-        axios(`/availability/${resort}?date=${choosenDate}`).then((res) => {
+        const date = format(choosenDate, "MM/dd/yyyy");
+        axios(`/availability/${resort}?date=${date}`).then((res) => {
           setIsAvailable(res.data.remaining > 0);
           setResortUrl(res.data.resortUrl);
         });
@@ -107,8 +108,7 @@ export default function App() {
   }, [resort, choosenDate, setIsAvailable]);
 
   const handleDateChange = (date) => {
-    console.log({ date });
-    setChoosenDate(format(date, "MM/dd/yyyy"));
+    setChoosenDate(date);
   };
 
   const handlePhoneNumberChange = (e) => {
@@ -120,9 +120,10 @@ export default function App() {
     if (phoneNumber && choosenDate && resort) {
       if (!isLoading) {
         setIsLoading(true);
+        const date = format(choosenDate, "MM/dd/yyyy");
         await axios.post(`/subscribe`, {
           phoneNumber,
-          choosenDate,
+          date,
           resort,
         });
         setIsLoading(false);
@@ -137,7 +138,6 @@ export default function App() {
     resort,
     isAvailable,
     isLoading,
-    choosenDate,
     resortList,
   });
 
@@ -266,14 +266,14 @@ export default function App() {
       </PageWrapper>
       <PageWrapper>
         <h1>My Story</h1>
-        <p className={'story'}>
+        <p className={"story"}>
           Skiing is one of my favorite activities of the winter season. I was
           itching to get back outside and enjoy some fresh powder after spending
           nearly a year cooped up at home. I took a day off from work and went
           skiing with my friends at Stevens Pass Resort. It was amazing.
         </p>
 
-        <p className={'story'}>
+        <p className={"story"}>
           Like so many others, I didn’t have plans for Christmas this year. I
           spent the week before Christmas looking for some fun activities. My
           friend invited me to a two day skiing trip with her. She already had
@@ -286,14 +286,14 @@ export default function App() {
           write a small application to notify me when a slot opens up?”
         </p>
 
-        <p className={'story'}>
+        <p className={"story"}>
           I was on vacation (which had piled up due to COVID), so I had plenty
           of free time, and I was eager to go skiing with my friend. With a lot
           of help from Stack Overflow, I wrote a simple app and was able to get
           tickets that same day. I was psyched!
         </p>
 
-        <p className={'story'}>
+        <p className={"story"}>
           After I returned from the skiing trip, I was excited to take this
           little project further. Maybe I could help other people in the same
           position get tickets, too! Taking time off from work to go skiing in
@@ -301,20 +301,22 @@ export default function App() {
           we should all be able to go skiing every weekend.{" "}
         </p>
 
-        <p className={'story'}>
+        <p className={"story"}>
           I’m paying the domain, Twilio (SMS), and server fees out of pocket,
           and I’ve spent a lot of time on this. I am working to add more resorts
-          as fast as I can. Every bit of support I get makes a big difference for me, 
-          so please consider making a small donation, if you can.
+          as fast as I can. Every bit of support I get makes a big difference
+          for me, so please consider making a small donation, if you can.
         </p>
 
-        <Donate/>
+        <Donate />
         <img src={venmo} width={244} />
 
-        <p className={'story'}>
-        See you on the slopes,<br/>10Chen <br/>Jan 8th, 2020
+        <p className={"story"}>
+          See you on the slopes,
+          <br />
+          10Chen <br />
+          Jan 8th, 2020
         </p>
-        
       </PageWrapper>
     </>
   );
