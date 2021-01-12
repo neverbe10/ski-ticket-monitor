@@ -5,6 +5,7 @@ const resortMap = {
     "https://www.keystoneresort.com/plan-your-trip/lift-access/tickets.aspx",
   stevens:
     "https://www.stevenspass.com/plan-your-trip/lift-access/tickets.aspx",
+  breckenridge: 'https://www.breckenridge.com/plan-your-trip/lift-access/tickets.aspx',
 };
 
 module.exports = async function getResortAvailbility(resort) {

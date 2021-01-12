@@ -1,7 +1,7 @@
 const getAvailability = require("./getAvailability");
 const databaseConnection = require('./db');
 
-const resortArray = ["keystone", "stevens"];
+const resortArray = ["keystone", "stevens", "breckenridge"];
 const REFRESH_INTERVAL = 60000; //ms
 
 function sleep(ms) {

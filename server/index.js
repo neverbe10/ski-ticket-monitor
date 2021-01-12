@@ -5,10 +5,11 @@ const databaseConnection = require('./service/db');
 
 require('./service/refreshAvailability')();
 
-const resortArray = ["keystone", "stevens"];
+const resortArray = ["keystone", "stevens", "breckenridge"];
 const resortMap = {
   'keystone': 'https://www.keystoneresort.com/plan-your-trip/lift-access/tickets.aspx',
-  'stevens': 'https://www.stevenspass.com/plan-your-trip/lift-access/tickets.aspx'
+  'stevens': 'https://www.stevenspass.com/plan-your-trip/lift-access/tickets.aspx',
+  'breckenridge': 'https://www.breckenridge.com/plan-your-trip/lift-access/tickets.aspx'
 }
 
 // Require the framework and instantiate it
