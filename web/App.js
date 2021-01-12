@@ -176,12 +176,18 @@ export default function App() {
 
   return (
     <>
+      
       <PageWrapper>
-        <Donate />
-        <h1>Ski Ticket Monitor</h1>
-        <p>
+      <h1>Ski Ticket Monitor</h1>
+      <a href="#my_story" >My story</a>
+      <p>
           <em>Go Skiing Every Weekend</em>
         </p>
+      </PageWrapper>
+      <PageWrapper>
+        <Donate />
+        
+        
         <Selectors>
           <MuiPickersUtilsProvider utils={DateFnsUtils}>
             <KeyboardDatePicker
@@ -264,8 +270,8 @@ export default function App() {
         </p>
         <SnowContainer />
       </PageWrapper>
-      <PageWrapper>
-        <h1>My Story</h1>
+      <PageWrapper id="my_story">
+        <h1 id="story">My Story</h1>
         <p className={"story"}>
           Skiing is one of my favorite activities of the winter season. I was
           itching to get back outside and enjoy some fresh powder after spending
@@ -325,12 +331,18 @@ export default function App() {
 const PageWrapper = styled("div")`
   background-color: rgba(255, 255, 255, 0.9);
   padding: 12px 24px;
-  margin: 80px auto;
+  margin: 40px auto;
   display: flex;
   max-width: 400px;
   border-radius: 4px;
   flex-direction: column;
   align-items: center;
+
+  a:first-of-type {
+    color: black;
+    font-size: 24px;
+    font-family: "Kalam",cursive;
+  }
 
   > div:first-child {
     position: absolute;
