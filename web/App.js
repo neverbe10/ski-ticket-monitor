@@ -123,9 +123,16 @@ export default function App() {
         const date = format(choosenDate, "MM/dd/yyyy");
         await axios.post(`/subscribe`, {
           phoneNumber,
-          date,
+          choosenDate: date,
           resort,
+        }).then(res => alert("Success!")).catch(error => {
+          if (error.response && error.response.data.message) {
+            alert(error.response.data.message);
+          } else {
+            alert('Failed, reached out to admin');
+          }
         });
+
         setIsLoading(false);
       }
     }
