@@ -186,7 +186,7 @@ export default function App() {
       
       <PageWrapper>
       <h1>Ski Ticket Monitor</h1>
-      <a href="#my_story" >My story</a>
+      <TitleLink href="#my_story" >My story</TitleLink>
       <p>
           <em>Go Skiing Every Weekend</em>
         </p>
@@ -237,7 +237,7 @@ export default function App() {
         <Subscribe>
           <h3>SMS Notification</h3>
           <p>
-            Subscribe to SMS notification and you will receive an text as soon
+            Subscribe to SMS notification, you will get a text when you signed up and you will receive an text as soon
             as an opening is spotted
           </p>
           <FormControl
@@ -335,6 +335,12 @@ export default function App() {
   );
 }
 
+const TitleLink = styled('a')`
+  color: black;
+  font-size: 24px;
+  font-family: "Kalam",cursive;
+`;
+
 const PageWrapper = styled("div")`
   background-color: rgba(255, 255, 255, 0.9);
   padding: 12px 24px;
@@ -344,12 +350,6 @@ const PageWrapper = styled("div")`
   border-radius: 4px;
   flex-direction: column;
   align-items: center;
-
-  a:first-of-type {
-    color: black;
-    font-size: 24px;
-    font-family: "Kalam",cursive;
-  }
 
   > div:first-child {
     position: absolute;

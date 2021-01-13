@@ -6,8 +6,9 @@
   "scripts": {
     "web": "parcel web/index.html",
     "build": "parcel build web/index.html",
+    "watch": "parcel watch web/index.html",
     "start": "node server",
-    "dev": "npm run server & npm run web",
+    "dev": "npm run server & npm run watch",
     "server": "node server"
   },
   "author": "",
