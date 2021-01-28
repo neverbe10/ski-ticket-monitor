@@ -192,6 +192,11 @@ export default function App() {
         </p>
       </PageWrapper>
       <PageWrapper>
+        <p>Sorry to disappoint, I've decided to shut down this website because of the high cost of the Twilio service. Up until this point, this app has sent out 2892 SMS messages, and I'm very proud of this little achievement of mine.</p>
+        <p>I've made my code public, you can check it out and run it locally yourself if you like <a href="https://github.com/neverbe10/ski-ticket-monitor">Github Repo</a>.</p>
+        <p>If you are not a developer like myself, I also packaged this application with Electron, and you can download the app <a href="https://github.com/neverbe10/STM-electron/releases/tag/v1.0">here</a>. (* Currently only available in macOS, and only support Stevens Pass).</p>
+      </PageWrapper>
+      {/* <PageWrapper>
         <Donate />
         
         
@@ -276,7 +281,7 @@ export default function App() {
           <em>This website is not run by or affiliated with Vail Resorts</em>
         </p>
         <SnowContainer />
-      </PageWrapper>
+      </PageWrapper> */}
       <PageWrapper id="my_story">
         <h1 id="story">My Story</h1>
         <p className={"story"}>
